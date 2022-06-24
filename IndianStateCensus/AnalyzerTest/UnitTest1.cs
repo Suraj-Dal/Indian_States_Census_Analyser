@@ -11,7 +11,7 @@ namespace AnalyzerTest
             Assert.AreEqual(expected, result);
         }
         [Test]//UC1.2 Given invalid file
-        public void GivenInvaliFile_ThrowCostomExceptio_InvaliFile()
+        public void GivenInvaliFile_ThrowCostomException_InvaliFile()
         {
             try
             {
@@ -23,6 +23,21 @@ namespace AnalyzerTest
             catch(Exception ex)
             {
                 Assert.AreEqual("Invalid File", ex.Message);
+            }
+        }
+        [Test]//UC1.3 given invalid file type
+        public void GivenInvaliFileType_ThrowCostomException_InvaliFileType()
+        {
+            try
+            {
+                int expected = 29;
+                IndianStateCensus.StateCensusAnalyzer analyzer = new IndianStateCensus.StateCensusAnalyzer();
+                int result = analyzer.DataAnalyzer(@"C:\Projects\Indian_States_Census_Analyser\StateCensusData.cs");
+                Assert.AreEqual(expected, result);
+            }
+            catch (Exception ex)
+            {
+                Assert.AreEqual("Invalid file Type", ex.Message);
             }
         }
     }

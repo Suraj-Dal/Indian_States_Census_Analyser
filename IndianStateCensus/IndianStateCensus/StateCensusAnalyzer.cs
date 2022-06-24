@@ -43,7 +43,7 @@ namespace IndianStateCensus
                     throw new ExceptionHandler(ExceptionHandler.ExceptionType.INCORRECT_HEADER, "Incorrect Header");
                 }
             }
-            throw new ExceptionHandler(ExceptionHandler.ExceptionType.INVALID_FILE_TYPE, "Invali file Type");
+            throw new ExceptionHandler(ExceptionHandler.ExceptionType.INVALID_FILE_TYPE, "Invalid file Type");
         }
     }
 }
