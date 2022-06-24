@@ -10,7 +10,7 @@ while (choice != 0)
             Console.WriteLine("No. of records in file are:" + countRecords);
             break;
         case 2:
-            int noOfRecords = analyzer.StateCodeAnalyzer(@"C:\Projects\Indian_States_Census_Analyser\StateCode.csv");
+            int noOfRecords = analyzer.StateCodeAnalyzer(@"C:\Projects\Indian_States_Census_Analyser\StateCodeData.csv");
             Console.WriteLine("No. of records in file are:" + noOfRecords);
             break;
         default:
