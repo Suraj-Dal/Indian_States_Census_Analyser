@@ -40,7 +40,7 @@ namespace AnalyzerTest
                 Assert.AreEqual("Invalid file Type", ex.Message);
             }
         }
-        [Test]//UC1.3 given correct file but with incorrect delimiter
+        [Test]//UC1.4 given correct file but with incorrect delimiter
         public void GivenIncorrectDelimiter_ThrowCostomException_IncorrectDelimiter()
         {
             try
@@ -53,6 +53,21 @@ namespace AnalyzerTest
             catch (Exception ex)
             {
                 Assert.AreEqual("Incorrect Delimiter", ex.Message);
+            }
+        }
+        [Test]//UC1.5 given correct file but with incorrect delimiter
+        public void GivenIncorrectHeader_ThrowCostomException_IncorrectHeader()
+        {
+            try
+            {
+                int expected = 29;
+                IndianStateCensus.StateCensusAnalyzer analyzer = new IndianStateCensus.StateCensusAnalyzer();
+                int result = analyzer.DataAnalyzer(@"C:\Projects\Indian_States_Census_Analyser\IncorrectHeaderCensusData.csv");
+                Assert.AreEqual(expected, result);
+            }
+            catch (Exception ex)
+            {
+                Assert.AreEqual("Incorrect Header", ex.Message);
             }
         }
     }

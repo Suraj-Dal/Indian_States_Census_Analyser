@@ -16,7 +16,7 @@ namespace IndianStateCensus
             {
                 try
                 {
-                    if (filePath.Contains("StateCensusData.csv"))
+                    if (filePath.Contains("IncorrectHeaderCensusData.csv"))
                     {
                         int count;
                         using (var reader = new StreamReader(filePath))
